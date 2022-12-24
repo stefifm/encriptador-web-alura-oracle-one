@@ -9,7 +9,8 @@ function encriptar() {
    textoEncriptado = textoEncriptado.replace(/[Ñ]/, "N"); 
    textoEncriptado = textoEncriptado.replace(/[n]/, "n");
    textoEncriptado = textoEncriptado.replace(/['|°¬!^`~"#$%&/()Çç=?¿{}_,.´+<>¡¨*:;]/img,'');
-   textoEncriptado = textoEncriptado.replace(/^[a-z\s]+$/img,'');
+   textoEncriptado = textoEncriptado.replace(/[^[a-z\s]+$]/img,'');
+   
 
   document.getElementById("textoDescifrado").innerHTML = textoEncriptado;
 
