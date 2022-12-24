@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="reset.css" />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+    <script
+      type="text/javascript"
+      src="app.js"></script>
+    <title>Encriptador Web</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="caja-nav">
+        <nav class="navbar">
+          <div class="brand">
+            <img
+              src="imagenes/Vector.png"
+              alt=""
+              class="logo" />
+          </div>
+          <div class="nombre-brand">
+            <h1>Encriptador</h1>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-principal">
+      <section class="caja-cifrado">
+        <div class="caja-texto-cifrado">
+          <textarea
+            name=""
+            id="textoCifrado"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese el texto aquí"></textarea>
+        </div>
+        <div class="caja-botones">
+          <div class="aviso">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-exclamation-circle-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+            </svg>
+            <span> Solo letras en minúsculas y sin aceto </span>
+          </div>
+          <div class="botones">
+            <input
+              type="button"
+              value="Encriptar"
+              id="btnEncriptado" />
+            <input
+              type="button"
+              value="Desencriptar"
+              id="btnDesencriptado" />
+          </div>
+        </div>
+      </section>
+      <aside class="lado">
+        <div class="caja-desencriptado">
+          <div
+            id="titulo"
+            class="caja-mensaje">
+            <div class="muneco">
+              <img
+                src="imagenes/robot.gif"
+                alt="" />
+            </div>
+            <div class="mensaje">
+              <h2>Ningún mensaje fue encontrado</h2>
+              <p>Ingrese el texto que desees encriptar o desencriptar</p>
+            </div>
+          </div>
+          <div class="caja-descifrado">
+            <textarea
+              name=""
+              id="textoDescifrado"
+              cols="30"
+              rows="10"
+              class="texto-desencriptado"></textarea>
+            <button
+              type="button"
+              id="btnCopiar"
+              class="boton-copiar">
+              Copiar
+            </button>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer class="footer">
+      <div class="copyright">
+        <p>&copy; Stefania Verónica Bruera - Curso Alura-Oracle - 2022</p>
+      </div>
+      <div class="redes-sociales">
+        <ul>
+          <li>
+            <a href="https://twitter.com/stefifm">
+              <img
+                src="imagenes/twitter.svg"
+                alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/stefania-bruera/">
+              <img
+                src="imagenes/linkedin.svg"
+                alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/bruerastefania/">
+              <img
+                src="imagenes/instagram.svg"
+                alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/stefifm">
+              <img
+                src="imagenes/github.svg"
+                alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      const btnEncriptado = document.querySelector('#btnEncriptado');
+      btnEncriptado.onclick = encriptar;
+
+      const btnDesencriptado = document.querySelector('#btnDesencriptado');
+      btnDesencriptado.onclick = desencriptar;
+
+      const btnCopiado = document.querySelector('#btnCopiar');
+      btnCopiado.onclick = copiar;
+    </script>
+  </body>
+</html>
