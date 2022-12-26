@@ -6,8 +6,8 @@ function encriptar() {
    textoEncriptado = textoEncriptado.replace(/[aáàäâ]/img, "ai");
    textoEncriptado = textoEncriptado.replace(/[oóòöô]/img, "ober");
    textoEncriptado = textoEncriptado.replace(/[uúùüû]/img, "ufat");
-   textoEncriptado = textoEncriptado.replace(/[Ñ]/, "N"); 
-   textoEncriptado = textoEncriptado.replace(/[n]/, "n");
+  
+   textoEncriptado = textoEncriptado.replace(/[ñ]/, "n");
    textoEncriptado = textoEncriptado.replace(/['|°¬!^`~"#$%&/()Çç=?¿{}_,.´+<>¡¨*:;]/img,'');
    textoEncriptado = textoEncriptado.replace(/[^[a-z\s]+$]/img,'');
    
